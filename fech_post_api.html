@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+
+    <style>
+      span {
+        color: black;
+      }
+
+      h1 {
+        color: cadetblue;
+      }
+
+      p {
+        color: chocolate;
+        font-weight: 700;
+      }
+
+      button {
+        background: black;
+        color: white;
+        padding: 8px 30px;
+      }
+
+      #result {
+        width: 50%;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="add">Get Post</button>
+    <div id="result"></div>
+
+    <script>
+      var btn = document.getElementById("add");
+      var url = "https://jsonplaceholder.typicode.com/posts";
+      btn.addEventListener("click", function () {
+        fetch(url)
+          .then((response) => response.json())
+          .then((myJson) => {
+            console.log(myJson);
+            myJson.map((item) => {
+              var result = document.getElementById("result");
+              var heading = document.createElement("h1");
+              var span = document.createElement("span");
+              var para = document.createElement("p");
+              result.appendChild(span);
+              result.appendChild(heading);
+              result.appendChild(para);
+              span.innerHTML = item.id;
+              heading.innerHTML = item.title;
+              para.innerHTML = item.body;
+            });
+          });
+      });
+    </script>
+  </body>
+</html>
