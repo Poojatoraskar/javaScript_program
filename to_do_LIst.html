@@ -1,0 +1,74 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Todo list </title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-8 mx-auto p-5">
+            <div class="heading text-center mb-4">
+                <h1>Todo list</h1>
+            </div>
+            <div class="d-flex align-items-center justify-content-center mb-4">
+                <div class="form-group mb-0 mr-4">
+                    <input type="text" class="form-control" id="title">
+                </div>
+                <button type="submit" class="btn btn-primary" id="additem">Add Name</button>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">S.no</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    arr = [];
+    let btn_add = document.getElementById("additem");
+    let btn_delete = document.getElementById("deleted");
+
+    function get_update() {
+        let title = document.getElementById('title').value;
+        arr.push([title]);
+        update();
+    }
+
+    function update() {
+        str = '';
+        arr.forEach((element, index) => {
+            str = str +
+                `<tr>
+        <th scope="row">${index + 1}</th>
+        <td>${element[0]}</td>
+        <td><button type="submit" class="btn btn-primary btn-sm " onclick="deleted(${index})" >Delete</button></td>
+        </tr>`
+        });
+        document.getElementById("tableBody").innerHTML = str;
+    }
+
+    function deleted(item_index) {
+        arr.splice(item_index, 1);
+        console.log(arr);
+        update();
+    }
+
+    btn_add.addEventListener("click", () => {
+        get_update();
+    });
+</script>
+
+</html>
