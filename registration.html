@@ -1,156 +1,289 @@
-<!DOCTYPE html>    
-<html>    
-<head>    
-    <title>Reg Form</title>  
-    <meta http-equiv="Content-Type" type="text/html" charset="UTF-8"/>
 
+<!DOCTYPE html>  <!-- bydefault, why to use : dtd : to validate the tags we r using
+-->
+<html>
+    <head> 
+        <title>Table Demo</title>
+        <meta charset="UTF-8"> <!-- Unicode Transformation Format-->
+        <meta name="description" content="brief description about ur web page">
+        <meta name="keywords" content="important words">
+        <meta name="author" content="author name">
+        <meta name="viewport" content="width=device-width,initial-scale=1">      
+    </head>   
     <style>
-        
-    input[type="text"] 
-    {  
-        width: 250px;  
-    }  
-    input[type="submit"], input[type="reset"]
-     {  
-        width: 77px;  
-        height: 27px;  
-        position: relative;left: 180px;  
-    }  
-    form{  
-        text-align: center;  
-        font-family: Calibri;  
-        font-size: 20px;  
-        border: 3px solid black;  
-        width: 600px;  
-        margin: 20px auto;  
-    }  
-    td {  
-        padding: 10px;  
-    }  
-    td:first-child {  
-        text-align: right;  
-        font-weight: bold;  
-    }  
-    td:last-child {  
-        text-align: left;}
-    </style>
-</head>    
-<body>    
-   
-    <form method="" action="" name="reg_form" onsubmit="return validate()">    
-        <h2>Registration Form</h2>    
-        <table>    
-            <tr>    
-                <td><label>First Name: </label></td>    
-                <td>    
-                    <input type="text" name="fname" placeholder="First Name" id="ename" class="inputname">    
-                </td>    
-            </tr>    
-            <tr>    
-                <td><label>Last Name: </label></td>    
-                <td>    
-                    <input type="text" name="lname" placeholder="Last Name">    
-                </td>    
-            </tr>    
-            <tr>    
-                <td><label>Address: </label></td>    
-                <td>    
-                    <input type="textarea" size="50" name="address" placeholder="Address">    
-                </td>    
-            </tr>    
-            <tr>    
-                <td><label>Gender: </label></td>    
-                <td>    
-                    <input type="radio" name="gender" value="male">Male    
-                    <input type="radio" name="gender" value="femele">Female    
-                </td>    
-            </tr>    
-            <tr>    
-                <td><label>Email Id: </label></td>    
-                <td>    
-                    <input type="text" name="email" placeholder="example@gmail.com">    
-                </td>    
-            </tr>    
-            <tr>    
-                <td><label>Mobile: </label></td>    
-                <td>    
-                    <input type="number" name="mobile">    
-                </td>    
-            </tr>    
-            <tr>    
-            <td><label>Course: </label></td>    
-                <td>    
-                    <select name="course">    
-                        <option value="select course">select course</option>    
-                        <option value="HTML">HTML</option>    
-                        <option value="CSS">CSS</option>    
-                        <option value="JavaScript">JAVASCRIPT</option>    
-                        <option value="Java">JAVA</option>    
-                    </select>    
-                </td>    
-            </tr>    
-            <tr>    
-                <td>    
-                    <input type="submit" name="submit" value="Submit">    
-                    <input type="reset" name="reset" value="Reset">    
-                </td>    
-            </tr>             
-        </table>    
-    </form> 
-    <script>    
-        function validate() {    
-            // var fname = document.reg_form.fname;  
-            var lname = document.reg_form.lname;    
-            var address = document.reg_form.address;    
-            var gender = document.reg_form.gender;    
-            var email = document.reg_form.email;    
-            var mobile = document.reg_form.mobile;    
-            var course = document.reg_form.course;  
-            var ename=document.getElementById("ename").value;
-            var regEname=/^[a-zA-Z ]{2,50}$/;
-            if(!regEname.test(ename))
-             {
-                 alert("Only alphabate allow in name field");
-                 document.getElementById("ename").focus();
-                 return false;
-             }
-            if (fname.value.length <= 0) {    
-                alert("Name is required");    
-                fname.focus();    
-                return false;    
-            }    
-            if (lname.value.length <= 0) {    
-                alert("Last Name is required");    
-                lname.focus();    
-                return false;    
-            }    
-            if (address.value.length <= 0) {    
-                alert("Address is required");    
-                address.focus();    
-                return false;    
-            }    
-            if (gender.value.length <= 0) {    
-                alert("Gender is required");    
-                gender.focus();    
-                return false;    
-            }    
-            if (email.value.length <= 0) {    
-                alert("Email Id is required");    
-                email.focus();    
-                return false;    
-            }    
-            if (mobile.value.length <= 0) {    
-                alert("Mobile number is required");    
-                mobile.focus();    
-                return false;    
-            }    
-            if (course.value == "select course") {    
-                alert("Course is required");    
-                course.focus();    
-                return false;    
-            }    
-            return false;    
-        }    
-    </script>       
-</body>    
-</html>     
+       span{
+           font-size: 16px;
+           color: red;
+       }
+       table{
+           border:1px solid blue;
+           background-color: cornsilk;
+       }
+       table tr td{
+           border: none;
+       }
+      
+    </style> 
+<body>
+    <h2>Registration Form</h2>   
+<form action="Success.html" onsubmit="return validateform()" novalidate> <!-- novalidate : to disable browser validation-->
+<table border="1">
+<tr><td><label for="fname">First Name:</label></td>
+<td> <input type="text" id="fname" name="myname"  onblur="validate1()"></td></tr>
+<tr><td></td><td><span id="error1"></span></td></tr>
+<tr><td><label for="lname">Last Name:</label></td><td> 
+<input type="text" id="lname" name="myname"  onblur="validate2()" > </td></tr>
+<tr><td></td><td><span id="error2"></span></td></tr>
+
+<tr><td><label for="pass">Password:</label></td>
+<td><input type="password" id="pass" placeholder="enter password"  name="pass" minlength="4" maxlength="8" required onblur="validate3()"></td></tr>
+<tr><td></td><td><span id="error3"></span></td></tr>
+
+<tr><td><label for="c_pass">Confirm Password:</label></td>
+<td><input type="password" id="c_pass" name="pass" required  onblur="validate4()"></td></tr>
+<tr><td></td><td><span id="error4"></span></td></tr>
+
+<tr><td><label for="c_pass">Email Address</label></td>
+<td> <input type="email" id="mailID" name="email" required onblur="validate5()" ></td></tr>
+<tr><td></td><td><span id="error5"></span></td></tr>
+    
+
+<tr><td><label for="age">Age:</label></td>
+<td><input type="number" id="age" name="age" min="1" max="100" required onblur="validate6()"></td></tr>
+<tr><td></td><td><span id="error6"></span></td></tr>
+
+<tr><td><label for="mobileno">Mobile :</label></td>
+    <!-- it should contain only digits -->
+    <td><input type="tel" id="mobileno" pattern="[0-9]{10}" required  onblur="validate7()"></td></tr>
+    <tr><td></td><td><span id="error7"></span></td></tr>
+    <tr><td><label>Interested Courses :</label></td>
+    <td>
+     <label for="java">JAVA:</label><input type="checkbox" id="java" name="courses">
+     <label for="python">PYTHON:</label><input type="checkbox" id="python" name="courses" checked>
+     <label for="testing">TESTING:</label><input type="checkbox" id="testing" name="courses">
+     <label for="web">WEB:</label><input type="checkbox" id="web" name="courses">
+    </td>
+</tr>
+<tr><td><label for="address">Address :</label></td>
+    <td><textarea id="address"></textarea></td>
+</tr>
+<tr><td><label for="address">City :</label></td>
+    <td>
+        <select id="city">
+            <option value="navimumbai">Navi Mumbai</option>
+            <option value="mumbai">Mumbai</option>
+        </select>
+    </td>
+</tr>
+<tr><td><label>Gender :</label></td>
+    <td>
+     <label for="male">MALE:</label><input type="radio" id="male" name="gender" value="male">
+     <label for="female">FEMALE:</label><input type="radio" id="female" name="gender"  value="female">
+    </td>
+</tr>
+<tr><td colspan="2"><input type="submit" value="Register"><input type="reset"></td></tr>
+</table>
+</form>
+
+<script>
+    let fnameNode=document.getElementById("fname");
+    let spanNode1=document.getElementById("error1");
+function validate1(){
+    spanNode1.innerHTML=" ";
+    let fname=fnameNode.value;
+    if(fname=='')
+    {
+        spanNode1.innerHTML="This field is required";
+        fnameNode.style.border="1px solid red";
+        return false;
+    }
+    else if(fname.includes(' ')){
+        spanNode1.innerHTML="space is not allowed";
+        fnameNode.style.border="2px solid red";
+        return false;
+    }
+    else{
+        fnameNode.style.border="2px solid green"; 
+        return true;
+    }
+}
+let lnameNode=document.getElementById("lname");
+let spanNode2=document.getElementById("error2");
+
+function validate2(){
+    spanNode2.innerHTML=" ";
+    let lname=lnameNode.value;
+    if(lname=='')
+    {
+        spanNode2.innerHTML="This field is required";
+        lnameNode.style.border="1px solid red";
+        return false;
+    }
+    else if(lname.includes(' ')){
+        spanNode2.innerHTML="space is not allowed";
+        lnameNode.style.border="2px solid red";
+        return false;
+    }
+    else{
+        lnameNode.style.border="2px solid green"; 
+        return true;
+    }
+}
+
+let passNode=document.getElementById("pass");
+let spanNode3=document.getElementById("error3");
+
+function validate3(){
+    spanNode3.innerHTML="";
+    let password=passNode.value;
+    let regExp = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])");
+    console.log(password);
+    console.log(regExp.test(password));
+
+    if( password=='')
+    {
+        spanNode3.innerHTML="This field is required";
+        passNode.style.border="1px solid red";
+        return false;
+    }
+    else if( password.length<4 || password.length>8  ){
+        spanNode3.innerHTML=" should be 4 to 8";
+        passNode.style.border="2px solid red";
+        return false;
+    }
+    else if(regExp.test(password)==false)
+    {
+        spanNode3.innerHTML="password  should be alphanumeric with special symbol";
+        passNode.style.border="2px solid red";
+        return false;
+    }
+    else{
+        passNode.style.border="2px solid green"; 
+        return true;
+    }
+}
+
+let c_passNode=document.getElementById("c_pass");
+let spanNode4=document.getElementById("error4");
+
+function validate4(){
+    spanNode4.innerHTML="";
+    let password=passNode.value;
+    let c_password=c_passNode.value;
+    if( c_password=='')
+    {
+        spanNode4.innerHTML="This field is required";
+        c_passNode.style.border="1px solid red";
+        return false;
+    }
+    else if(c_password!=password ){
+        spanNode4.innerHTML="password should be match";
+        c_passNode.style.border="2px solid red";
+        return false;
+    }
+    
+    else{
+        c_passNode.style.border="2px solid green"; 
+        return true;
+    }
+}
+
+
+let  emailNode=document.getElementById("mailID");
+let spanNode5=document.getElementById("error5");
+
+function validate5(){
+    spanNode5.innerHTML="";
+    let emailId=emailNode.value;
+    let subs=emailId.substring(emailId.indexOf('@')+1);
+    if( emailId=='')
+    {
+        spanNode5.innerHTML="This field is required";
+        emailNode.style.border="1px solid red";
+        return false;
+    }
+    else if(!emailId.includes('@')|| subs==''){
+        spanNode5.innerHTML="Invalid";
+        emailNode.style.border="2px solid red";
+        return false;
+    }
+    
+    else{
+        emailNode.style.border="2px solid green"; 
+        return true;
+    }
+}
+
+let ageNode=document.getElementById("age");
+let spanNode6=document.getElementById("error6");
+
+function validate6(){
+    spanNode6.innerHTML=" ";
+    let age=ageNode.value;
+    if(age=='')
+    {
+        spanNode6.innerHTML="This field is required";
+        ageNode.style.border="1px solid red";
+        return false;
+    }
+    else if(isNaN(age)||age<1||age>100){
+        spanNode6.innerHTML="The age must be a number between 1 and 100";
+        ageNode.style.border="2px solid red";
+        return false;
+    }
+    else{
+        ageNode.style.border="2px solid green"; 
+        return true;
+    }
+}
+
+let mobilenoNode=document.getElementById("mobileno");
+let spanNode7=document.getElementById("error7");
+
+function validate7(){
+    spanNode7.innerHTML="";
+    let mobileno=mobilenoNode.value;
+    let regExp = new RegExp(" /^[7-9][0-9]{9}$/");
+    console.log(mobileno);
+    console.log(regExp.test(mobileno));
+
+    if( mobileno=='')
+    {
+        spanNode7.innerHTML="Please enter your Mobile No";
+        mobilenoNode.style.border="1px solid red";
+        return false;
+    }
+    else if(mobileno.length<10 || mobileno.length>10  ){
+        spanNode7.innerHTML=" Mobile No. is not valid, Please Enter 10 Digit Mobile No.";
+        mobilenoNode.style.border="2px solid red";
+        return false;
+    }
+    else if(regExp.test(mobileno))
+    {
+        spanNode7.innerHTML="Mobile No should be correct";
+        mobilenoNode.style.border="2px solid red";
+        return false;
+    }
+    else{
+        mobilenoNode.style.border="2px solid green"; 
+        return true;
+    }
+}
+
+
+function validateform(){
+    let v1=validate1();
+    let v2=validate2();
+    let v3=validate3();
+    let v4=validate4();
+    let v5=validate5();
+    let v6=validate6();
+    let v7=validate7();
+    alert(" Registration Form not submit")
+    
+    return(v1&&v2&&v3&&v4&&v5&&v6&&v7);
+  
+}
+</script>
+</body>
+</html>

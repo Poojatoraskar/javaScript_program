@@ -1,0 +1,43 @@
+
+.calculatorinner{
+    margin:10px auto;
+    width: 720px;
+    height:520px;
+    padding: 15px;
+    background-color: black;
+}
+.calc-display{  
+    height:100px;
+    text-align: right;
+    color: white;
+}
+.calc-display-head{
+    color:white;
+}
+.calc-display-panel {
+    font-size:28px;
+  text-align: right;
+ 
+}
+
+.cal-no  .calc-press{
+    min-height: 66px;
+    vertical-align: text-bottom;
+    border:solid 1px rgba(0,0,0,0.1);
+    margin:3px;
+    font-size:32px;
+    color:black;
+    background-color: rgb(236, 230, 230);
+  
+}
+.cal-no .c-oprators{
+    background-color: rgb(243, 192, 52);
+    color: white;
+}
+.h-backdata{
+    color: white;
+    font-size:20px;
+}
+.history-title{
+    color: white;
+}

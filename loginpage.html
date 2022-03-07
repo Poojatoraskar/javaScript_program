@@ -6,11 +6,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <title> Registration and Login Form</title>
+    <title>Login Form</title>
     <style>
-      
+        body {
+            background: white;
+            color: white;
+            font: 87.5%/1.5em 'Open Sans', sans-serif;
+            margin: 0;
+        }
         
-    
+        p {
+            line-height: 1.5em;
+        }
+        /* after {
+            clear: both;
+        } */
         .mainsection {
             width:500px;
             height: 500px;
@@ -23,144 +33,203 @@
             display: inline-block;
            
         }
-        .mainsection form {
+    
+        .login form {
             margin: auto;
             padding: 22px 22px 22px 22px;
-            width: 100%;
+            /* width: 100%; */
             border-radius: 5px;
-            background: #046abd;
+            background: #064579;
+          
         }
+       
         
-        .mainsection form span {
-            background-color: #b9d3f1;
-            border-radius: 3px 0px 0px 3px;
-            color: #606468;
-            display: block;
-            float: left;
-            line-height: 50px;
-            text-align: center;
-            width: 50px;
-            height: 50px;
-        }
-        
-        .mainsection form input[type="email"] {
-            background-color: #b9d3f1;
+        .login form input[type="email"] {
+            background-color: #deeaf8;
             border-radius: 0px 3px 3px 0px;
             color: #a9a9a9;
             margin-bottom: 1em;
             padding: 0 16px;
             width: 90%;
             height: 50px;
-            border:none;
         }
         
-        .mainsection form input[type="password"] {
-            background-color: #b9d3f1;
+        .login form input[type="password"] {
+            background-color: #deeaf8;
             border-radius: 0px 3px 3px 0px;
             color: #a9a9a9;
             margin-bottom: 1em;
             padding: 0 16px;
             width: 90%;
             height: 50px;
-            border:none;
         }
         
-        .mainsection form input[type="submit"] {
-            background: black;
+        .login form input[type="submit"] {
+            background: #b5cd60;
             border: 0;
-            width: 20%;
+            width: 100%;
             height: 40px;
             border-radius: 3px;
             color: white;
             cursor: pointer;
         }
         
+        #login form input[type="submit"]:hover {
+            background: #16aa56;
+        }
+        
+        #text {
+            display: block;
+            font-weight: 300;
+            font-style: italic;
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
-  <div class="logindetails">
-    <div class="mainsection">
-        <form name='form-login'>
-
-            <h1 class="d-flex justify-content-center">REGISTER</h1>
-
-            <label for="regname">Email</label><br>
-            <input type="email" id="regname" placeholder="Username" required>
-
-            <label for="regpass">Password</label>
-            <input type="password" id="regpass" placeholder="Password" required>
-
-            <ul class="helper-text">
-                <li class="length">Must be at least 8 characters long.</li>
-                <li class="uppercase">Must contain an uppercase letter.</li>
-                <li class="special">Must contain a number or special character.</li>
-            </ul>
-            <input id="rgstr_btn" type="submit" value="Register" onclick="store()">
-
-        </form>
+    <div class="logindetails">
+        <div class="login mainsection">
+            <form name='form-login' id="form">
+    
+                <h1>REGISTER</h1>
+    
+                <label for="name">Email</label>
+                <input type="email" class="form-control" onkeydown="validation()" id="name" placeholder="Username" required>
+                <span id="text"></span>
+                <br>
+                <label for="pw">Password</label>
+                <input type="password" id="pw" placeholder="Password" required>
+    
+                <ul class="helper-text">
+                    <li class="length">Must be of minimum of 8 and maximum of 24 charatcer.</li>
+                    <li class="lowercase">Must contain a lowercase letter.</li>
+                    <li class="uppercase">Must contain an uppercase letter.</li>
+                    <li class="special">Must contain a number or special character.</li>
+                </ul>
+                <input id="rgstr_btn" type="submit" value="Register" onclick="store()">
+    
+            </form>
+        </div>
+    
+        <div class="login">
+            <form name='form-login'>
+    
+                <h1>SIGN IN</h1>
+    
+                <label for="userName">Email</label><br>
+                <input type="email" id="userName" onkeydown="validation1()" placeholder="Username" required>
+                <span id="text1"></span>
+                <br>
+                <label for="userPw">Password</label>
+                <input type="password" id="userPw" placeholder="Password" required>
+    
+                <div id="remember">
+                    <input type="checkbox" value="lsRememberMe" id="rememberMe" style="display: inline-block;">
+                    <label>Remember me</label>
+                </div>
+    
+                <input id="login_btn" type="submit" value="Login" onclick="check()">
+    
+            </form>
+        </div>
     </div>
-
-    <div class="mainsection">
-        <form name='form-login'>
-
-            <h1 class="d-flex justify-content-center">SIGN IN</h1>
-
-            <label for="userName">Email</label><br>
-            <input type="email" id="userName" placeholder="Username" required>
-
-            <label for="userPw">Password</label>
-            <input type="password" id="userPw" placeholder="Password" required>
-
-            <div id="remember">
-                <input type="checkbox" value="lsRememberMe" id="rememberMe" >
-                <label>Remember me</label>
-            </div>
-
-            <input id="login_btn" type="submit" value="Login" onclick="check()">
-
-        </form>
-    </div>
-  </div>
 </body>
 <script>
+    function validation() {
+        let email = document.getElementById('name').value
+        let text = document.getElementById('text')
+        let pattern = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+
+        if (email.match(pattern)) {
+            form.classList.add('valid')
+            form.classList.remove('invalid')
+            text.innerHTML = "Your Email Address in valid"
+            text.style.color = 'Green'
+        } else {
+            form.classList.remove('valid')
+            form.classList.add('invalid')
+            text.innerHTML = "Please Enter Valid Email Address"
+            text.style.color = 'red'
+        }
+
+        if (email == '') {
+            form.classList.remove('valid')
+            form.classList.remove('invalid')
+            text.innerHTML = ""
+            text.style.color = 'red'
+        }
+    }
+
+    function validation1() {
+        let Useremail = document.getElementById('userName').value
+        let text1 = document.getElementById('text1')
+        let pattern = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+
+        if (Useremail.match(pattern)) {
+            form.classList.add('valid')
+            form.classList.remove('invalid')
+            text1.innerHTML = "Your Email Address in valid"
+            text1.style.color = 'green'
+        } else {
+            form.classList.remove('valid')
+            form.classList.add('invalid')
+            text1.innerHTML = "Please Enter Valid Email Address"
+            text1.style.color = 'red'
+        }
+
+        if (Useremail == '') {
+            form.classList.remove('valid')
+            form.classList.remove('invalid')
+            text.innerHTML = ""
+            text.style.color = 'red'
+        }
+    }
+
     function store() {
 
-        var regname = document.getElementById('regname');
-        var regpass = document.getElementById('regpass');
-         var upperCaseLetters = /[A-Z]/g;
+        var name = document.getElementById('name');
+        var pw = document.getElementById('pw');
+        let email = document.getElementById('name').value;
+        let pattern = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+        var lowerCaseLetters = /[a-z]/g;
+        var upperCaseLetters = /[A-Z]/g;
         var numbers = /[0-9]/g;
-
-        if (regname.value.length == 0) {
+        if (name.value.length == 0) {
             alert('Please fill in email');
 
-        } else if (regpass.value.length == 0) {
+        } else if (!email.match(pattern)) {
+            alert("Please Enter Valid Email ")
+        } else if (pw.value.length == 0) {
             alert('Please fill in password');
 
-        } else if (regname.value.length == 0 && regpass.value.length == 0) {
+        } else if (name.value.length == 0 && pw.value.length == 0) {
             alert('Please fill in email and password');
 
-        } else if (regpass.value.length < 8 && regpass.value.length > 24) {
+        } else if (pw.value.length < 8 && pw.value.length > 24) {
             alert('Min of 8 and max of 24');
 
-        } else if (!regpass.value.match(numbers)) {
+        } else if (!pw.value.match(numbers)) {
             alert('please add 1 number');
 
-        } else if (!regpass.value.match(upperCaseLetters)) {
+        } else if (!pw.value.match(upperCaseLetters)) {
             alert('please add 1 uppercase letter');
 
-       
+        } else if (!pw.value.match(lowerCaseLetters)) {
+            alert('please add 1 lovercase letter');
+
         } else {
-            localStorage.setItem('regname', regname.value);
-            localStorage.setItem('regpass', regpass.value);
+            localStorage.setItem('name', name.value);
+            localStorage.setItem('pw', pw.value);
             alert('Your account has been created');
         }
+
     }
 
     //checking
     function check() {
-        var storedName = localStorage.getItem('regname');
-        var storedPw = localStorage.getItem('regpass');
+        var storedName = localStorage.getItem('name');
+        var storedPw = localStorage.getItem('pw');
 
         var userName = document.getElementById('userName');
         var userPw = document.getElementById('userPw');
