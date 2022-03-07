@@ -1,0 +1,1274 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('../font/Lato-Regular.woff2') format('woff2'),
+        url('../font/Lato-Regular.woff') format('woff'),
+        url('../font/Lato-Regular.ttf') format('truetype'),
+        url('../font/Lato-Regular.svg#Lato-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../font/Lato-Light.woff2') format('woff2'),
+        url('../font/Lato-Light.woff') format('woff'),
+        url('../font/Lato-Light.ttf') format('truetype'),
+        url('../font/Lato-Light.svg#Lato-Light') format('svg');
+    font-weight: 300;
+    fonts-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../font/Lato-Bold.woff2') format('woff2'),
+        url('../font/Lato-Bold.woff') format('woff'),
+        url('../font/Lato-Bold.ttf') format('truetype'),
+        url('../font/Lato-Bold.svg#Lato-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+/* main body code start */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size:1.6rem;
+    font-weight: normal;
+    overflow-x: hidden;
+    font-family: 'Lato-Regular',sans-serif;
+}
+
+p{font-size: 1rem;}
+.font{font-family: 'Lato-Regular',sans-serif;}
+.black_color{color: #505050;}
+.white_color{color:#FFFFFF ;}
+.footer_li_link{font-size:0.875rem;
+    font-family: 'Lato-Regular',sans-serif;
+    word-spacing: normal;
+}
+.navbar_link_header{
+    font-size:14px;
+
+}
+.title_one{font-size: 3.625rem;}
+.title_two{font-size: 2.25rem;}
+.btn_white_title{font-size: 1.375rem;}
+.middle_title{font-size: 2.610rem;}
+.footer_link_title{font-size:1.125rem ;}
+.textupper{
+    text-transform: uppercase;
+}
+li{  
+    list-style-type: none;
+}
+img{
+    width: 100%;
+}
+.b{font-weight:bolder ;}
+a{
+	text-decoration:none;
+	color:black;
+	font-family: 'Lato', Regular;
+	font-size:14px;
+}
+li{  
+    list-style-type: none;
+}
+/*                       header part start  */
+header{
+	margin:auto;
+    padding: 0;
+	width:100%;
+}
+header .container{
+    max-width:1109px;
+    margin: 0px auto;
+}
+header .container .mainnavdiv{
+    display: flex;
+    justify-content: space-between;
+}
+header .container .mainnavdiv .navbar{
+    text-align:end;
+}
+header .container .mainnavdiv .logo{
+    /* width:350px; */
+    padding:0.5rem;
+    display: flex;
+}
+header .container .mainnavdiv .logo img{
+	width:42px;
+	height:42PX;
+}
+.logoheading{
+    margin: 5px;
+    font-size:15px;
+    /* width:300px; */
+    font-family: 'Lato-Regular',sans-serif;
+}
+header .container .mainnavdiv .navbar .navbar-top{
+    display: flex;justify-content: flex-end;
+}
+header .container .mainnavdiv .navbar .navbar-top .navbar-top-frist-link{
+    display: flex;
+}
+
+header .container .mainnavdiv .navbar .navbar-top .navbar-top-frist ul li{
+	padding: 0 5px;
+}
+.navbar-top-frist ul li a{
+	font-size:14px;
+	padding:0.5px;
+}
+header .container .mainnavdiv .navbar .navbar-top .navbar-top-second ul {
+	display:flex;
+	margin-right:0px;
+}
+header .container .mainnavdiv .navbar .navbar-top .navbar-top-second ul li{
+    padding: 0 2px; 
+}
+header .container .mainnavdiv .navbar .navbar-bottom ul{
+    display: flex;  
+}
+.lang::after{
+		content:url('../images/asset1.png');
+		}
+.pipedForTopNavigation::after{
+    content:url('../images/asset1.png');
+}
+.navbar-bottom ul li::after{
+		margin-left:5px;
+		content:url('../images/asset1.png');
+}
+.navbar-bottom ul li:last-child:after {
+	content:'';
+}
+#roundbuttonul::after{
+    content:url('../images/asset1.png');
+		}
+
+.round-button1{
+    background-color:rgb(38,87,129);
+    border-radius: 50%;
+   	padding:0px 8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+.round-button2{
+    background-color: rgb(82,178,123);
+    border-radius: 50%;
+   	padding:0px 8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+.round-button3{
+    background-color: rgb(242,225,98);
+    border-radius: 50%;
+    padding:0px 8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 3px;
+   
+}
+
+.search-modal {
+    display: none;
+    position: absolute;
+    left: 200px;
+    top:80px;
+    width: 200px;
+    height:25px;
+    background: black;
+    z-index: 999;
+  }
+  
+  .search-modal .search-input {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    padding: 3px 60px 3px 5px;
+    border: 1px solid black;
+    outline: none;
+  
+  }
+  .search-modal button {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    padding: 0 5px;
+    background-color: #52b27b;
+    border: none;
+    color: white;
+  }
+  
+  .search-modal .search-close {
+    position: absolute;
+    top:40%;
+    left: -18px;
+    
+    transform: translateY(-50%);
+    color: #3f3531;
+    font-size: 31px;
+    font-weight: 700;
+  }
+  
+  .header-for-mobile-app{
+    display:none;
+}
+#hh{
+    display: none;
+}
+/* banner start */
+.banner{
+	margin:auto;
+    position: relative;
+}
+.banner-main .container{
+    max-width:1109px;
+    width: 100%;
+    margin: 0px auto;
+}
+.banner img{
+ width: 100%;
+}
+.banner-main .container .banner-title{
+    position: absolute;
+    top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 900;
+}
+.banner-main .container .banner-title .banner__heading{
+    padding: 12px 25px 12px 20px;
+    font-size: 57px; 
+    background-color: #1b7642;
+    color: white;
+    font-family: "Lato", sans-serif;
+    margin-bottom: 5px;
+}
+.banner-main .container .banner-title .banner__subheading{
+    padding: 12px 25px 12px 20px;
+    background-color: #1b7642;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 25px
+}
+.banner-main .btn_white_title {
+    padding: 10px 21px;
+    font-size: 22px;
+    text-transform: uppercase;
+    background-color: white;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+    .center_down{
+        margin: auto;
+        margin-top: -40px;
+        width: 70px;
+        height: 70px;
+    }
+    /*                                                              irrigation start */
+     .irrigation
+     {
+        margin:75px auto;
+        position: relative;
+    }   
+	.irrigation .container
+    {
+	max-width:1109px;
+    width: 100%;
+    margin: 0px auto;
+    padding:20PX;
+    }
+    .irrigation  .container .irrigation_inner{
+        display: flex;
+        flex-direction: row;
+    }
+    .irrigation  .container .irrigation-heading .irr_img{
+       width:741px;
+       height: 90px;
+    }
+
+    .irrigation-logo img{
+        /* position:absolute;
+        right:12rem; */
+        width: 182px;
+        height: 169px;
+      
+    }
+    .irrigation-heading__top{
+        text-align: center;
+        margin-bottom: 20px;
+        font-size:43px;
+    }
+    .irrigation-heading__bottom{
+        color: #4A4A4A;
+         text-align: right;
+         margin-top: 20px;
+         margin-left:180px;
+         font-size:43px;
+    }
+    /*                                                          irrigation-images */
+    .irrigation-images{
+      margin: 0px auto;
+      background-image: linear-gradient(white,#DFD8D8);
+      padding-bottom: 100px;
+        }
+        .irrigation-images .container{
+         max-width:1095px;
+          margin: 0px auto;
+          width: 100%;
+        }
+        .irrigation-images .container .irrigation-figure{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center
+        }
+        .irrigation-images .container .irrigation-figure li{
+            width: 150px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+        } 
+        .irrigation-images .container .irrigation-figure li img{
+             text-align:center; 
+             width: 75px;
+             height: 75px; 
+             margin-bottom: 10px;
+        }
+        .irrigation-images .container .irrigation-figure li span{
+            text-align:center;
+            margin-top:10px;
+            font-weight:600;
+            font-size: 16px;  
+        }
+        .irrigation-figure li figcaption{
+            /* width:96px; */
+            text-align:center;
+            margin-top:10px;
+            font-weight:600;
+            font-size: 16px;
+        }
+    /*                                            about start */
+    .about{
+	position: relative;
+    background-color:#3F3531;
+    z-index: 1;
+	}
+	.about .container{
+	max-width:1095px;
+    margin: 0px auto;
+	}
+	.about .container .about-inner{
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    justify-content: space-between;
+	}
+	.about::after{
+    content: '';
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index:-1;
+  	 background-image: url('../images/white.jpg');
+ 	}
+     .about .container .about-inner .videoinfo video{
+         width: 556px;
+         height: 352px;
+     }
+     .about .container .about-inner .playbtn{
+        border:1px solid rgba(27,118,66,1); 
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        padding: 5px;
+        position:absolute;
+        left:30%;  
+     }
+     .playbtninner{
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        border:1px solid rgba(27,118,66,1); 
+        background-color:#44AF72;   
+     }
+     .playbtninner img{
+         margin:20px 0px 0px 22px;
+         width: 25px;
+         height: 25px;
+     }
+ 	.aboutinfo{
+ 	max-width: 70%;
+    padding: 1.5rem;
+    color: rgb(255,255,255);
+    margin-left:25px;
+ 	}
+ 	.aboutinfop{
+ 	font-family: 'Lato-Regular',sans-serif;
+    line-height:22px;
+    padding: 1rem 0rem;
+    text-align:left;
+ 	}
+ 	.knowMorebtn{
+    color: rgb(255,255,255);
+    background-color: rgb(68,175,114);
+    padding: 0.5rem 2rem;
+ 	}
+     /*                                                                    green part */
+     .greenplat{
+        background-image:url('../images/grras2.png');	
+        height:100px;
+        margin-bottom:-2px;
+        margin-top: 20px;
+     }
+     /*                                                             footer */
+     footer{
+         position: relative;
+         background-color:rgba(27,118,66,1);}
+    footer .container{
+        max-width:1095px;
+        width: 100%;
+        margin: 0px auto;
+        /* display: flex;
+        flex-direction: row;  */
+   }
+   .inner-footer{
+   display: flex;
+   flex-direction: row;
+   }
+   .subscibebox{
+   width: 60%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly; 
+   }
+   .subscibeboxSection-one{
+    display: flex;
+   justify-content: space-around;
+   padding: 2rem 0rem;
+   margin-top: 10px;
+   }
+   .subscibeboxSection-two {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 10px;
+   }
+   .subscibeboxSection-two p{
+       font-size: 12px;
+   }
+   .aboutUsLinkfooter {
+   display: inline
+   }
+   .aboutUs-important-link{
+       column-count:2;
+   }
+   .subscibebox .newsletterstitle {
+  letter-spacing:0.5px;
+  font-family: 'Lato-Regular',sans-serif;
+   }
+   .inputForEmail{
+   background-color: rgba(0,0,0,0.1);
+   border-radius: 50px;
+   margin-top: 20px;
+   }
+   .inputForEmail input {
+   width:672px;
+   background-color:transparent;
+   border:none;
+   padding: 1rem;
+   color:rgb(255,255,255);
+   height: 45px;
+   }
+   .inputForEmail button {
+   width:191px;
+   padding:10px;
+   border-radius: 50px;
+   border: none;
+   font-size: 16px;
+   color: #393939;
+   margin:5px;
+   height: 45px;
+   position: absolute;
+   top: 40px;
+   right:560px;
+   }
+   .contact{
+    width:35%;
+    margin-left:20px;
+    background-color: rgba(0,0,0,0.1);
+    padding:1.2rem;
+    }
+    .contactUsContainer{
+     display: flex;
+     align-items: center;
+     padding:1rem;
+     height: 80px;
+     }
+     .contactUsContainer .img_contact{
+         width: 10%;
+        margin: auto;
+     }
+     .contactUsContent{
+     color: rgb(255,255,255);
+     width: 70%;
+  
+     border-bottom: 2px solid  rgba(235, 222, 222, 0.2);
+     padding-bottom: 10px;
+     margin-top: 10px;
+  } 
+   .followUs i{
+    margin-left: 20px;
+ }
+ .followUs {
+margin-top: 10px;
+ }
+ 
+.footerLeftSection-two-for-mobile{
+    display: none;
+}
+.header-for-mobile{
+    display: none;
+}
+.header-for-mobile-app{
+    display: none;
+}
+@media only screen and (max-width: 991px) {
+    .title_one{font-size: 2.563rem;}
+    .title_two{font-size: 1.425rem;}
+    .btn_white_title{font-size: 1rem;}
+    .middle_title{font-size: 1.875rem;}
+    .footer_link_title{font-size:1rem ;}
+    .footer_li_link{font-size: 0.75REM;}
+    /*                                                                   991    header part start */
+    header .container{
+        max-width:794px;
+        width: 100%;
+        margin: 0px auto;
+    }
+    header .container .mainnavdiv .navbar .navbar-top .navbar-top-frist-link{
+        display: none;
+    }
+    .search-container{
+        margin-right:5px;
+    }
+    #hh{
+        display: block;
+        font-size: 16px;
+        margin-top:7px;
+    }
+    .header-for-mobile{
+        display:block;
+        z-index: 1;
+        background-color:  rgb(27,118,66);
+        position:fixed;
+        right: 0px;
+        left: 0px;
+        top:6rem;
+        height: 100%;
+        padding: 2rem;
+        color: rgb(255, 255, 255);
+    }
+    header .container .mainnavdiv .navbar .navbar-bottom ul{
+        display:none;  
+    }
+    /*                                                                   991 banner start */
+    .banner-main .container{
+        max-width:794px;
+        width: 100%;
+    }
+    .banner-main .container .banner-title{
+        position: absolute;
+        top:150px
+    }
+    .banner-main .container .banner-title .banner__heading{
+        padding: 12px 25px 12px 20px;
+        font-size:41px; 
+    }
+    .banner-main .container .banner-title .banner__subheading{
+        padding: 12px 25px 12px 20px;
+        font-size:27px;
+    }
+    .banner-main .btn_white_title {
+        padding: 10px 21px;
+        font-size:16px;
+    }
+    /*                                                                  991 irrigation start */
+    
+    .irrigation .container{
+        max-width:794px; 
+    }
+    .irrigation  .container .irrigation-heading .irr_img{
+        width:537px;
+        height:66px;
+     }
+    .irrigation-logo img{
+        width: 133px;
+        height: 123px;
+        margin:10px 0px 0px 50px;
+    }
+    .irrigation-heading__top{
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
+    .irrigation-heading__bottom{
+        color: #4A4A4A;
+         text-align:right;
+         margin-top: 20px;
+         margin: auto;
+         font-size: 32px;
+    }
+    /* .                                                                     991  irrigation-images  */
+    .irrigation-images .container{
+        max-width:794px;
+        width: 100%;
+    } 
+
+    /*                                                                         991 about start */
+    .about .container{
+        max-width:794px; 
+        width: 100%;
+    }
+    .about .container .about-inner .videoinfo{
+        width:404px;
+        height:256px;
+    }
+    .about::after{
+        width: 30%;
+    }
+    .about .container .about-inner .videoinfo video{
+        width:404px;
+        height:256px;
+        position: absolute;
+        left: 20px;
+    }
+    .about .container .about-inner .playbtn{
+        position:absolute;
+        left:25%;   
+     }
+     .aboutinfo{
+         max-width:70%;
+       padding: 1rem;
+       margin-left:300px;
+        }
+        .aboutinfop{
+            font-size: 18px;
+        }
+     /*                                                                         991 footer start */
+     footer .container{
+        max-width:794px;    
+    }
+    .inputForEmail input {
+        width:489px;
+        background-color:transparent;
+        border:none;
+        padding: 1rem;
+        color:rgb(255,255,255);
+        height:38px;
+        }
+        .inputForEmail button{
+            width:138px;
+            position: absolute;
+             top:35px;
+             right:420px;
+             height:38px;
+             font-size: 10px;
+            }
+            .contactUsContent {
+                width: 90%;
+                margin-left:5px;
+            }
+}
+@media only screen and (max-width: 767px){
+    .title_one{font-size:2rem;}
+    .title_two{font-size:1.263rem;}
+    .btn_white_title{font-size: 0.75rem;}
+    .middle_title{font-size:1.438rem;}
+    .footer_link_title{font-size:15px;}
+    .footer_li_link{font-size:0.563REM;}
+    p{font-size: 14px;}
+
+    header{
+        padding: 10px;
+    }
+    .search-modal {
+        display: none;
+        position: absolute;
+        left: 100px;
+        top:80px;
+        width: 200px;
+        height:25px;
+        background: black;
+        z-index: 999;
+      }
+     /*                                                                         767 banner */
+    .banner-main .container{
+        max-width:622px;
+        width: 100%;
+    }
+    .banner-main .container .banner-title .banner__heading{
+        padding: 10px 10px 10px 10px;
+        font-size:32px; 
+    }
+    .banner-main .container .banner-title{
+        position: absolute;
+        top: 140px;
+        left: 20px;
+    }
+    .banner-main .container .banner-title .banner__subheading{
+        padding: 12px 25px 12px 20px;
+        font-size:20px;
+    }
+    .banner-main .btn_white_title {
+        padding: 10px 21px;
+        font-size:14px;
+    }
+     /*                                                                            767 irrigation */
+     .irrigation .container{
+        max-width:622px;
+        width: 100%;
+    }
+    .irrigation  .container .irrigation-heading{
+        margin: auto;
+    }
+    .irrigation  .container .irrigation-heading .irr_img{
+        width:416px;
+        height:51px;
+     }
+    .irrigation-logo img{
+        width: 103px;
+        height: 95px;
+       margin: auto;
+    }
+    .irrigation-heading__top{
+        font-size: 25px;
+        text-align: center;
+        margin: auto;
+    }
+    .irrigation-heading__bottom{
+         /* color: #4A4A4A; */
+         text-align:right;
+         margin: auto;
+         font-size:25px;
+    }
+    .center_down{
+        width: 40px;
+        height: 40px; 
+    }
+    /*                                                           767   irrigation-images */
+    .irrigation-images .container{
+            max-width:622px;
+              margin:0px auto ;
+    }
+    .irrigation-images .container .irrigation-figure li span{
+        text-align:center;
+        margin-top:10px;
+        font-weight:600;
+        font-size: 13px;  
+    }
+    /*                                                                          767   about */
+   .about .container{
+    max-width:622px;
+    width: 100%; 
+    padding: 0px;}
+    
+   .about .container .about-inner{
+       padding: 0px;
+   }
+   .about .container .about-inner .videoinfo{
+    width:313px;
+    height:198px;
+    }
+    .about::after{
+        width: 30%;
+    }
+    .about .container .about-inner .videoinfo video{
+        width:313px;
+        height:198px;
+        position: absolute;
+        left: 20px;
+    }
+    .about .container .about-inner .playbtn{
+        position:absolute;
+        left:18%;   
+    }
+    .aboutinfo{
+        max-width:70%;
+         padding: 1rem;
+        margin-left:300px;
+        }
+        .aboutinfop{
+            font-size: 15px;
+        }
+  
+    footer .container{
+        max-width:622px;
+    }
+   
+}
+@media only screen and (max-width: 658px){
+    header .container .mainnavdiv .navbar .navbar-top{
+        display: block;
+    }
+    header .container .mainnavdiv {
+    display: block;
+    }
+    header .container{
+        margin: auto;
+    }
+    header .container .mainnavdiv .logo{
+        justify-content: center;
+        margin-left: 50px;
+    
+    }
+.navbar-top .navbar-top-second ul {
+    justify-content: center;
+    margin:auto;
+}
+}
+@media only screen and (max-width:538px){
+    .irrigation  .container .irrigation_inner{
+        display: flex;
+        flex-direction:column-reverse;
+        align-items: center;
+    }
+    .banner-main .container .banner-title .banner__heading {
+        padding: 5px;
+        font-size: 16px;
+    }
+    .banner-main .container .banner-title .banner__subheading {
+        font-size: 14px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .banner-main .btn_white_title {
+        font-size: 10px;
+        padding:5px;
+    }
+    .banner-main .container .banner-title {
+        top: 160px; 
+    }
+    .about .container .about-inner{
+        flex-direction: column;
+        }
+}
+@media only screen and (max-width:457px)
+{
+    .irrigation  .container .irrigation_inner{
+        display: flex;
+        flex-direction:column-reverse;
+        align-items: center;
+    }
+    .banner-main .container .banner-title {
+        top: 150px; 
+    }
+    .banner-main .container .banner-title .banner__heading {
+        padding: 5px;
+        font-size: 16px;
+    }
+    .banner-main .container .banner-title .banner__subheading {
+        font-size: 14px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .banner-main .btn_white_title {
+        font-size: 10px;
+        padding:5px;
+    }
+    .irrigation-images .container .irrigation-figure{
+        flex-direction: column;
+    }
+    .banner-main .container{
+        max-width:345px;
+        width: 100%;
+    }
+  
+}
+
+@media only screen and (max-width:425px)
+{
+    .title_one{font-size:1.125rem;}
+    .title_two{font-size:0.75rem;}
+    .btn_white_title{font-size: 0.55rem;}
+    .middle_title{font-size:1.138rem;}
+    .footer_link_title{font-size:13px ;}
+    .footer_li_link{font-size:0.563REM;}
+
+    header .container{
+        max-width: 345px;
+        width: 100%;
+        margin: auto;
+    }
+    header .container .mainnavdiv .navbar .navbar-top{
+      
+        display: block;
+    }
+    header .container .mainnavdiv {
+    display: block;
+    }
+    .logoheading{
+        font-size: 13px;
+    }
+    header .container .mainnavdiv .logo {
+        margin: auto;
+    }
+    /*                                                                             425 banner */
+    .banner-main .container{
+        max-width:345px;
+        width: 100%;
+    }
+    .banner-main .container .banner-title .banner__heading{
+        padding: 10px 10px 10px 10px;
+        font-size:18px; 
+    }
+    .banner-main .container .banner-title{
+        position: absolute;
+        top: 150px;
+    }
+    .banner-main .container .banner-title .banner__subheading{
+        padding: 10px 10px 10px 10px;
+        font-size:14px;
+        margin-bottom: 8px;
+    }
+    .banner-main .btn_white_title {
+        padding: 5px 10px;
+        font-size:10px;
+    }
+    .center_down{
+        margin: auto;
+        margin-top: -20px;
+        width: 20px;
+        height: 20px;
+    }
+    /*                                                             425  irrigation start */
+    .irrigation
+    {
+       margin:45px auto;
+       position: relative;
+   }   
+   .irrigation .container
+   {
+    max-width:325px;
+    width: 100%;
+   margin: 0px auto;
+   padding:0px;
+   }
+   .irrigation  .container .irrigation_inner{
+       display: flex;
+       flex-direction:column-reverse;
+       align-items: center;
+   }
+   .irrigation  .container .irrigation-heading .irr_img{
+      width:230px;
+      height:28px;
+   }
+
+   .irrigation-logo img{
+       width:57px;
+       height:53px;
+       margin-right:auto;
+     
+   }
+   .irrigation-heading__top{
+       text-align: center;
+       margin-bottom: 20px;
+       font-size:14px;
+   }
+   .irrigation-heading__bottom{
+       color: #4A4A4A;
+        text-align: right;
+        margin-top: 20px;
+        /* margin-left:180px; */
+        margin: auto;
+        font-size:14px;
+   }
+   /*                                                          425 irrigation-images */
+    .irrigation-images .container{
+        max-width:325px;
+        width: 100%;
+       margin: 0px auto;
+    }
+   .irrigation-images .container .irrigation-figure{
+       flex-direction: column;
+   }
+    /*                                                            425 about */
+   .about{
+	position: relative;
+    background-color:white;
+    z-index: 1;
+	}
+	.about .container{
+	max-width:345px;
+    width: 100%;
+    margin:auto;
+	}
+    .aboutinfop{
+        font-size: 13px;
+    }
+	.about .container .about-inner{
+    flex-direction: column;
+	}
+	.about::after{
+    content: '';
+    display: none;
+ 	}
+     .about .container .about-inner .videoinfo video{
+         width: 343px;
+         height: 210px;
+     }
+     .about .container .about-inner .videoinfo {
+        width: 343px;
+        height: 210px;
+        margin-right:20px;
+    }
+     .about .container .about-inner .playbtn{
+        border:1px solid rgba(27,118,66,1); 
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        padding: 5px;
+        position:absolute;
+        left:30%; 
+        top: 30px; 
+     }
+     
+     .playbtninner img{
+         margin:20px 0px 0px 22px;
+         width: 25px;
+         height: 25px;
+     }
+ 	.aboutinfo{
+ 	max-width: 100%;
+    padding: 1.5rem;
+    color: #505050;
+    margin:auto;
+ 	}
+ 	.knowMorebtn{
+    color: rgb(255,255,255);
+    background-color: rgb(68,175,114);
+    padding: 0.5rem 2rem;
+ 	}
+     /*                                                                         425 footer */
+     footer{
+        position: relative;
+        background-color:rgba(27,118,66,1);}
+        footer .container{
+            max-width:345px;
+            width: 100%;
+            margin: 0px auto;
+        }
+        .inner-footer{
+        display: flex;
+        flex-direction: column;
+        }
+        .subscibebox{
+        width:100%;
+        display:block;
+        }
+        .newsletterstitle{
+            font-size: 16px;
+        }
+        .subscibeboxSection-one{
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem 0rem;
+        margin-top: 10px;
+       
+        }
+        .subscibeboxSection-two {
+        display: none;
+        }
+        .subscibeboxSection-two p{
+      font-size: 12px;
+        }
+        .aboutUsLinkfooter {
+        display: inline
+        }
+        .aboutUs-important-link{
+            column-count:1;
+        }
+  
+        .inputForEmail{
+        background-color: rgba(0,0,0,0.1);
+        border-radius: 50px;
+        margin-top: 20px;
+        width: 100%;
+        }
+        .inputForEmail input {
+        width:100%;
+        background-color:transparent;
+        border:none;
+        padding: 1rem;
+        color:rgb(255,255,255);
+        height: 35px;
+        }
+        .inputForEmail button {
+        width:112px;
+        padding:8px;
+        border: none;
+        font-size: 10px;
+        color: #393939;
+        margin:5px;
+        height:35px;
+        position: absolute;
+        top: 45px;
+        right:40px;
+        }
+        .contact{
+        width:100%;
+        margin:0px;
+        background-color: rgba(0,0,0,0.1);
+        padding:0px;
+        }
+        .contactUsContainer{
+            display: flex;
+            align-items: center;
+            padding:0rem;
+            height: 80px;
+            }
+            .contactUsContainer .img_contact{
+                width: 10%;
+            margin: auto;
+            }
+    .contactUsContent{
+    color: rgb(255,255,255);
+    width: 70%;
+ 
+    border-bottom: 2px solid  rgba(235, 222, 222, 0.2);
+    padding-bottom: 10px;
+    margin-top: 10px;
+ } 
+  .followUs i{
+   margin-left: 20px;
+}
+.followUs {
+margin-top: 10px;
+}
+.footerLeftSection-two-for-mobile{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    margin-top: 20px;
+    color: white;
+}
+.footerLeftSection-two-for-mobile p{
+    font-size: 10px;
+}
+}
+@media only screen and (max-width:375px){
+    .header .container{
+        width: 305px;
+    }
+    .banner-main .container{
+        width:305px;
+        width: 100%;
+    }
+    .irrigation .container{
+        width:305px;  
+    }
+    .irrigation-images .container{
+        width: 305px;
+    }
+    .about .container{
+        width: 305px;
+    }
+    footer .container
+    {
+        width: 305px;
+    }
+    .banner-main .container .banner-title{
+        top: 120px;
+    }
+    .banner-main .container .banner-title .banner__heading{
+        font-size:14px;
+    }
+    .banner-main .container .banner-title .banner__subheading{
+    font-size: 13px;
+    }
+    .inputForEmail button {
+        position: absolute;
+        top: 45px;
+        right:10px;
+        }
+        .header .container .mainnavdiv .logo{
+           flex-direction: column;
+        }
+        .logoheading{
+            margin-left:1px;
+            font-size: 13px;
+        }
+        header{
+            padding: 0px;
+            margin: 0px
+        }
+        .about .container .about-inner .videoinfo{
+            width: 200px;
+        }
+        .about .container .about-inner .videoinfo video{
+            width: 290px;
+        }
+}
+@media only screen and (max-width:339px)
+{
+    .banner-main .container .banner-title{
+        top: 110px;
+    }
+    .about .container .about-inner .videoinfo{
+        width:290px;
+    }
+}
+@media only screen and (max-width:320px){
+    .about .container .about-inner .videoinfo video{
+        width: 290px;
+    }
+   
+    .about .container .about-inner .videoinfo {
+        width: 290px;
+    }
+    footer{
+        padding: 0px;
+    }
+    .about .container .about-inner .playbtn{
+        position:absolute;
+        left:30%; 
+        top: 55px; 
+     }
+     .inputForEmail button {
+        top: 45px;
+        right:0px;
+        }
+        .footer_link_title{font-size:14px ;}
+        .navbarfooter{
+            margin-left: 20px;
+        }
+        .footer_li_link{font-size:8px;}
+        .banner-main .container .banner-title{
+            top: 100px;
+        }
+        
+        .logoheading{
+            font-size: 13px;
+        }
+}
