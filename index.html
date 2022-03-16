@@ -5,35 +5,36 @@
 	<title>Basic demo</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
 	   
 </head>
-<body id="demo">
-	<header>
+<body >
+	<header id="bgHead">
+		
 		<div class="container">
-		<div class=" mainnavdiv">
+		<div class="header-inner " id="demo">
 			<div class="box logo" id="logo">
-				<img src="images/icon.png">
-				<h2 class="logoheading b textupper">Vidarbha Irrigation <br>Development Corporation</h2>	
+				<img src="images/icon.png " alt="icon image">
+				<h2 class="logoheading bold  textupper " >Vidarbha Irrigation <br>Development Corporation</h2>	
 			</div>
 			<div class="navbar" id="navbar">
-				<div class="navbar-top">
+				<div class="navbar-top" >
 					<div class="navbar-top-frist">
 						<ul class="navbar-top-frist-link">
-							<li><a href="" class="navbar_link_header font  black_color">About Us</a></li>
-							<li><a href="" class="navbar_link_header font  black_color">Tenders</a></li>
-							<li><a href="" class="navbar_link_header font  black_color">Knowledge Cente</a></li>
+							<li><a href="" class="navbar_link_header font  " >About Us</a></li>
+							<li><a href="" class="navbar_link_header font  " >Tenders</a></li>
+							<li><a href="" class="navbar_link_header font " >Knowledge Cente</a></li>
 						</ul>
 					</div>
 					<div class="navbar-top-second">
 						<ul>
 							<li class="alphabet">
 									<ul class="pipedForTopNavigation">
-										<li><a class="alpha font black_color" href="#">A-</a></li>
-										<li><a class="alpha2 font black_color"  href="#">A</a></li>
-										<li><a class="alpha3 font black_color" href="#">A+</a></li>
+										<li><a class="dec-fontsize font " href="#">A-</a></li>
+										<li><a class="default-fontsize font "  href="#">A</a></li>
+										<li><a class="inc-fontsize font " href="#">A+</a></li>
 									</ul>
 							</li>
 							<li class="selectLang">
@@ -46,9 +47,20 @@
 							</li>
 							<li class="roundbutton">
 									<ul id="roundbuttonul">
-										<li><a href="#" class="round-button1"></a> </li>
-										<li><a href="#" class="round-button2"></a></li>
-										<li><a href="#" class="round-button3"></a></li>
+										<li>
+											
+											<button id="btn1" class="color-button btn-color-blue"></button>
+										 </li>
+										<li>
+											
+											<button id="btn2" class="color-button btn-color-green"></button>
+										</li>
+										<li>
+									
+												<button id="btn3" class="color-button btn-color-yellow"></button>
+											</a>
+										</li>
+										
 									</ul>
 							</li>
 							 <li>
@@ -57,23 +69,23 @@
 								<form class="search-modal" id="search-modal">
 									
 								  <input type="search" class="search-input" />
-								  <button type="submit">search</button>
-								  <a href="javascript:void(0);" class="search-close" onclick="searchBarClose()">x</a>
+								  <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+								  <a href="javascript:void(0);" class="search-close" onclick="searchBarClose()"><i class="fa-solid fa-square-xmark"></i></a>
 								</form>
 							  </div>
 							</li> 
-							<i class="fa fa-bars " id="hh" aria-hidden="true" onclick="toggleNavBar()"></i>
+							<i class="fa fa-bars " id="baricon" aria-hidden="true" onclick="toggleNavBar()"></i>
 						</ul>
 					</div>
 				</div>
 				<div class="navbar-bottom" id="res-navbar-bottom">
 						<ul>
-								<li><a href="" class="navbar_link_header font  black_color">Home</a></li>
-								<li><a href="" class="navbar_link_header font  black_color">Annual Report</a></li>
-								<li><a href="" class="navbar_link_header font  black_color">Circulars</a></li>
-								<li><a href="" class="navbar_link_header font  black_color">Disclosures</a></li>
-								<li><a href="" class="navbar_link_header font black_color ">Governing Councils</a></li>
-								<li><a href="" class="navbar_link_header font black_color ">Governing Councils Decisions</a></li>
+								<li><a href="" class="navbar_link_header font  ">Home</a></li>
+								<li><a href="" class="navbar_link_header font  ">Annual Report</a></li>
+								<li><a href="" class="navbar_link_header font  ">Circulars</a></li>
+								<li><a href="" class="navbar_link_header font  ">Disclosures</a></li>
+								<li><a href="" class="navbar_link_header font  ">Governing Councils</a></li>
+								<li><a href="" class="navbar_link_header font ">Governing Councils Decisions</a></li>
 							
 						</ul>	
 				</div>
@@ -91,30 +103,34 @@
 				
 			</div>
 		</div>
-		</div>
-	</header>
-	<!-----------End header-------->	
-	<main>
+
+
+</div>
+</header>
+
+	<!-----------End header-------->
 		<section class="banner-main">
-			<img src="./images/tracter.png">
+			<img src="./images/tracter.png" alt="tracter">
 			<div class="container">
 					<div class="banner-title">
 							<div class="banner__heading">VIDC</div>
 							<div class="banner__subheading">Agricultural Irrigation</div>
 							<a class="banner_btn  font btn_white_title">know more</a>
 					</div>
-					<div class="center_down"><img src="./images/down_arrow.png" alt=""></div>
+					<div class="center_down">
+						<a href="#irrigation"><i class="fa-solid fa-angle-down"></i></a>
+					</div>
 			</div>
 		</section>
 		<!-----------End banner-------->
 	
-		<section class="irrigation" id="irrigation">
+		<section class="irrigation " id="irrigation">
 			<div class="container">
 				<div class="irrigation_inner">
 						<div class="irrigation-heading">
 							<h3 class="irrigation-heading__top black_color font  b textupper">manage & develop</h3>
-						<!-- <h2 class="irrigation-heading__middle textupper">IRRIGATION</h2> -->
-							<img class="irr_img" src="./images/irrigation.jpg" alt="">
+							<h2 class="irrigation-heading__middle textupper">IRRIGATION</h2>
+							<!-- <img class="irr_img" src="./images/irrigation.jpg" alt=""> -->
 							<h3 class="irrigation-heading__bottom  font  b textupper">
 							in vidarbha , maharashtra
 						</h3>
@@ -130,39 +146,27 @@
 			<div class="container">
 				<ul class="irrigation-figure">
 					<li>
-							<img  src="./images/Hydroirrigation.png" alt="" >
+							<img  src="./images/Hydroirrigation.png" alt="Hydroirrigation icon" >
 							<span class="black_color font textupper">HYDRO IRRIGATION</span>
 					</li>
 					<li>
-						<!-- <figure>
-							<img  src="./images/HYDROELECTRICITY.png" alt="" >
-							<figcaption class="footer_li_link textupper black_color font ">HYDRO ELECTRICITY</figcaption>
-						</figure> -->
-						<img src="./images/HYDROELECTRICITY.png" alt=""  >
+					
+						<img src="./images/HYDROELECTRICITY.png" alt="HYDROELECTRICITY"  >
 							<span class="black_color font textupper">HYDRO ELECTRICITY</span>
 					</li>
 					<li>
-						<!-- <figure>
-							<img  src="./images/Agricultural.png" alt="" >
-							<figcaption class="footer_li_link textupper black_color font ">Agricultural development</figcaption>
-						</figure> -->
-						<img  src="./images/Agricultural.png" alt="" >
+					
+						<img  src="./images/Agricultural.png" alt="Agricultural" >
 							<span class="black_color font textupper">Agricultural development</span>
 					</li>
 					<li>
-						<!-- <figure>
-							<img  src="./images/Agriculturaldevelopment.png" alt="" >
-							<figcaption class="footer_li_link textupper black_color font " >Agricultural development</figcaption>
-						</figure> -->
-						<img  src="./images/Agriculturaldevelopment.png" alt="" >
+					
+						<img  src="./images/Agriculturaldevelopment.png" alt="Agriculturaldevelopment" >
 							<span class="black_color font textupper">Agricultural development</span>
 					</li>
 					<li>
-						<!-- <figure>
-							<img  src="./images/Sprinkler.png" alt="" >
-							<figcaption class="font footer_li_link textupper black_color font ">Sprinkler irrigation</figcaption>
-						</figure> -->
-						<img  src="./images/Sprinkler.png" alt=""  >
+						
+						<img  src="./images/Sprinkler.png" alt="Sprinkler"  >
 							<span class="black_color font textupper">Sprinkler irrigatioN</span>
 					</li>
 				</ul>
@@ -172,17 +176,19 @@
 		<section class="about">
 			<div class="container">
 				<div class="about-inner">
-					<div class="videoinfo">
-						<video class="aboutUsImage" poster="./images/plat.jpg" controls>
-						<source src="./images/v.mp4" type="video/mp4">
-					
-						</video>
-					</div>
-					<div class="playbtn">
-						<div class="playbtninner">
-							<img src="./images/playbtn.png" alt="">
+					<div class="vinfo">
+							<div class="videoinfo">
+								<video class="aboutUsImage" poster="./images/plat.jpg" >
+								<source src="#" type="video/mp4">
 							
-						</div>
+								</video>
+							</div>
+							<div class="playbtn">
+								<div class="playbtninner">
+									<img src="./images/playbtn.png" alt="playbtn">
+									
+								</div>
+							</div>
 					</div>
 					<div class="aboutinfo">
 						<article >
@@ -195,7 +201,8 @@
 	
 			</div>
 		</div>
-		</section><!-----------End about-------->
+		</section>
+		<!-----------End about-------->
 	</main>
 	<div class="greenplat">
 	</div>
@@ -205,9 +212,9 @@
 				<div class="subscibebox">
 						<span id="" class="btn_white_title white_color b  newsletterstitle ">Subscribe to our Newsletters</span>
 							<div class="inputForEmail">
-							<input class="inputForEmailPlaceholder" type="email" id="lname" name="lname" placeholder="Enter Email Id">
-							<button class="subscribeNowbtn textupper b ">subscibe now</button>
-						</div>
+								<input class="inputForEmailPlaceholder" type="email" id="lname" name="lname" placeholder="Enter Email Id">
+								<button class="subscribeNowbtn textupper b ">subscibe now</button>
+							</div>
 				
 				<div class="subscibeboxSection-one">
 						<div class="navbarfooter">
@@ -235,54 +242,57 @@
 			   </div>
 			   <div class="subscibeboxSection-two">
 					<p class="white_color">This is the official website of Vidarbha Irrigation Development Corporation<br>&copy Copyright 2019. All rights reserved</p>
-					<p class="white_color">Powered by <br>Webwerks Pvt Ltd</p>
+					<p class="white_color">Powered by <br><a href="Webwerks Pvt Ltd">Webwerks Pvt Ltd</a></p>
 				</div>
 				</div>
 				<div class="contact">
 					<div class="contact-container">
 						<div class="contactUsContainer">
-						<div class="img_contact">	<img src="./images/location.png" alt=""></div>
+						<div class="img_contact">	<img src="./images/location.png" alt="location"></div>
 							<ul class="contactUsContent">
 								<li>
-									<h3 class=" footer_link_title b white_color">Contact Us</h3>
+									<h3 class=" footer_link_title b white_color navbarfootersubtitle ">Contact Us</h3>
 									<p class="footer_li_link">Near Old Secretary Building, Sinchan Sewa Bhavan, Civil Lines, Nagpur, Maharashtra 440001<br></p>
 								</li>
 							</ul>
 						</div>
 						<div class="contactUsContainer">
-							<div class="img_contact"><img src="./images/phone.png" alt=""></div>
+							<div class="img_contact"><img src="./images/phone.png" alt="phone"></div>
 							<ul class="contactUsContent">
 								<li>
-									<h3 class=" footer_link_title b white_color">Call Us @</h3>
+									<h3 class=" footer_link_title b white_color  ">Call Us @</h3>
 									<p class="footer_li_link">0712 256 0347</p>
 								</li>
 							</ul>
 						</div>
 						 <div class="contactUsContainer  lastChildAboutUs">
-							<div class="img_contact"><img src="./images/msg.png" alt=""></div>
+							<div class="img_contact"><img src="./images/msg.png" alt="msg"></div>
 							<ul class="contactUsContent">
 								<li>
-									<h3 class=" footer_link_title b white_color">Email Us@</h3>
+									<h3 class=" footer_link_title b white_color ">Email Us@</h3>
 									<p class="footer_li_link">help@vidc.in</p>
 								</li>
 							</ul>
 						</div>
 						<div class="followUs white_color">
 							<h3 class="boxtitleall footer_link_title b white_color">Follow us
-								<span class="footer_li_link white_color"><i class="fab fa-facebook-f"></i>
-									<i class="fab fa-instagram"></i>
-								   <i class="fab fa-twitter"></i></span>
+								<span class="footer_li_link white_color">
+									<a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C550525806192%7Ce%7Cfacebook%20login%7C&placement=&creative=550525806192&keyword=facebook%20login&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696221912%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-1409285535%26loc_physical_ms%3D9062114%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjwz7uRBhDRARIsAFqjull0l-Bjn3SaNeUAOCBz9eo49BFrUPYkQABPudZu6DLH2Erm0g6rZfwaAuXEEALw_wcB">	<i class="fab fa-facebook-f"></i></a>
+									<a href="https://www.instagram.com/accounts/login/">
+									<i class="fab fa-instagram"></i></a>
+									<a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D">
+								   <i class="fab fa-twitter"></i></span></a>
 							</h3>
 							
 						</div>
-					</div><!-----------contact-container-------->
+					</div>
 					 <div class="footerLeftSection-two-for-mobile">
 						<p>This is the official website of Vidarbha Irrigation Development Corporation<br>&copy Copyright 2019. All rights reserved</p>
-						<p>Powered by <br>Webwerks Pvt Ltd</p>
+						<p>Powered by <br><a href="Webwerks Pvt Ltd">Webwerks Pvt Ltd</a></p>
 					</div>
-				</div><!-----------End contact-------->
-			</div><!-----------End inner-footer-------->
-		</div><!-----------End container-------->
+				</div>
+			</div>
+		</div>
 	</footer>
 
 
